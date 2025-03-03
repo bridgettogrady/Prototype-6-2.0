@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
     private IEnumerator spawnenemy(){
         if(justspawned == false){
             justspawned = true; 
-            GameObject enemyclone = Instantiate(enemy, );
+            GameObject enemyclone = Instantiate(enemy, transform.position, transform.rotation);
             yield return new WaitForSeconds(spawncooldown);
         }
     }
