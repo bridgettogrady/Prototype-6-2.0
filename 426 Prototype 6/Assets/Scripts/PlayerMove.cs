@@ -25,6 +25,16 @@ public class PlayerMove : MonoBehaviour
     bool bombEnabled = true;
     public BombMove bombScript;
 
+    // block
+    private Transform block;
+    private SpriteRenderer blockSprite;
+    public float minScale = 1f;
+    public float scaleSpeed = 0.8f;
+    public float maxScale;
+    private float currScale;
+    public float cooldown = 5f;
+    private bool canBlock = true;
+
     // UI
     public ChooseAttack UIScript;
     int currAttack = 0; // 0: laser, 1: fireball, 2: bomb
@@ -33,6 +43,10 @@ public class PlayerMove : MonoBehaviour
 
     void Start() {
         bombScript.SetPlayer(gameObject);
+
+        block = transform.Find("Block");
+        blockSprite = block.GetComponent<SpriteRenderer>();
+        currScale = maxScale;
     }
 
     // Update is called once per frame
@@ -60,11 +74,31 @@ public class PlayerMove : MonoBehaviour
             }
             if (currAttack == 2 && bombEnabled) {
                 ShootBomb();
-                // StartCoroutine(ReloadBomb());
+                StartCoroutine(ReloadBomb());
             }
         }
+        // input for blocking
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            Block();
+        }
+
         if(health <=0){
             Die();
+        }
+    }
+
+    private void Block() {
+        if (!canBlock) {
+            return;
+        }
+        Debug.Log("blocking");
+        blockSprite.enabled = true;
+        currScale *= (scaleSpeed * Time.deltaTime);
+        if (currScale > minScale) {
+            block.transform.localScale = new Vector3(currScale, currScale, 0);
+        }
+        else {
+            blockSprite.enabled = false;
         }
     }
 
@@ -83,10 +117,10 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void ShootBomb() {
-        // if (UIScript.BombAttack()) {
+        if (UIScript.BombAttack()) {
             Vector3 spawnPos = transform.TransformPoint(new Vector3(spawnAttackOffset.x, spawnAttackOffset.y, 0));           
             Instantiate(bomb, spawnPos, transform.rotation);            
-        // }
+        }
     }
 
     IEnumerator ReloadLaser() {
