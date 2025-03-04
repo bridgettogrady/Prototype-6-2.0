@@ -16,9 +16,19 @@ public class PlayerMove : MonoBehaviour
     public float fireballReload = 2.5f;
     bool fireballEnabled = true;
 
+    // bomb
+    public GameObject bomb;
+    public float bombReload = 7f;
+    bool bombEnabled = true;
+    public BombMove bombScript;
+
     // UI
     public ChooseAttack UIScript;
     int currAttack = 0; // 0: laser, 1: fireball, 2: bomb
+
+    void Start() {
+        bombScript.SetPlayer(gameObject);
+    }
 
     // Update is called once per frame
     void Update()
@@ -43,6 +53,10 @@ public class PlayerMove : MonoBehaviour
                 ShootFireball();
                 StartCoroutine(ReloadFireball());
             }
+            if (currAttack == 2 && bombEnabled) {
+                ShootBomb();
+                // StartCoroutine(ReloadBomb());
+            }
         }
     }
 
@@ -60,6 +74,13 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    private void ShootBomb() {
+        // if (UIScript.BombAttack()) {
+            Vector3 spawnPos = transform.TransformPoint(new Vector3(spawnAttackOffset.x, spawnAttackOffset.y, 0));           
+            Instantiate(bomb, spawnPos, transform.rotation);            
+        // }
+    }
+
     IEnumerator ReloadLaser() {
         laserEnabled = false;
         yield return new WaitForSeconds(laserReload);
@@ -71,4 +92,11 @@ public class PlayerMove : MonoBehaviour
         yield return new WaitForSeconds(fireballReload);
         fireballEnabled = true;
     }
+
+    IEnumerator ReloadBomb() {
+        bombEnabled = false;
+        yield return new WaitForSeconds(bombReload);
+        bombEnabled = true;
+    }
+
 }
