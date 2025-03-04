@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public Transform player; 
     public GameObject projectile;
     public ParticleSystem heal;
+    public TrailRenderer trail;
     public float cooldown = 3f;
     public float speed = 2f;
     private bool cancast = true;
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
         collider = gameObject.GetComponent<Collider>();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         meshRenderer = gameObject.GetComponent<MeshRenderer>();
+        trail = gameObject.GetComponent<TrailRenderer>();
     }
 
     // Update is called once per frame
@@ -51,10 +53,8 @@ public class Enemy : MonoBehaviour
         if(cancast){
             cancast = false;
             collider.enabled = false;
-            Debug.Log("Starting Flash");
             StartCoroutine(Flashroutine());
             yield return new WaitForSeconds(2f);
-            Debug.Log("Ending Flash");
             collider.enabled = true;
             yield return new WaitForSeconds(cooldown);
             cancast = true;
@@ -64,8 +64,10 @@ public class Enemy : MonoBehaviour
         if(cancast){
             cancast = false;
             speed = 30f;
+            trail.emitting = true;
             yield return new WaitForSeconds(0.1f);
             speed = 1f;
+            trail.emitting = false;
             yield return new WaitForSeconds(cooldown);
             cancast = true;
         }
@@ -74,7 +76,7 @@ public class Enemy : MonoBehaviour
         if(cancast){
             cancast = false;
             health += 1;
-            ParticleSystem particleclone = Instantiate(heal, transform.position, Quaternion.identity);
+            ParticleSystem particleclone = Instantiate(heal, transform.position + transform.forward * 1f, Quaternion.identity);
             yield return new WaitForSeconds(cooldown);
             Destroy(particleclone);
             cancast = true;
@@ -104,4 +106,5 @@ public class Enemy : MonoBehaviour
             elapsed+=0.2f;
         }
     }
+
 }

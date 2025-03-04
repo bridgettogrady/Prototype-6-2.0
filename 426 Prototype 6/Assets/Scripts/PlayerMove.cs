@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections;
+using Microsoft.Unity.VisualStudio.Editor;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -25,6 +28,8 @@ public class PlayerMove : MonoBehaviour
     // UI
     public ChooseAttack UIScript;
     int currAttack = 0; // 0: laser, 1: fireball, 2: bomb
+    public UnityEngine.UI.Image healthbar;
+    private float health = 100f;
 
     void Start() {
         bombScript.SetPlayer(gameObject);
@@ -57,6 +62,9 @@ public class PlayerMove : MonoBehaviour
                 ShootBomb();
                 // StartCoroutine(ReloadBomb());
             }
+        }
+        if(health <=0){
+            Die();
         }
     }
 
@@ -97,6 +105,32 @@ public class PlayerMove : MonoBehaviour
         bombEnabled = false;
         yield return new WaitForSeconds(bombReload);
         bombEnabled = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Enemy")){
+            health -= 10;
+            float targetFill = health/100f;
+            StartCoroutine(HealthAnimate(targetFill));
+        }
+    }
+    private IEnumerator HealthAnimate(float targetFill){
+        float elapsed = 0f;
+        float duration = 0.2f;
+        float startFill = healthbar.fillAmount;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            healthbar.fillAmount = Mathf.Lerp(startFill, targetFill, elapsed / duration);
+            yield return null;
+        }
+        healthbar.fillAmount = targetFill;
+    }
+    private void Die(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Destroy(gameObject);
     }
 
 }
