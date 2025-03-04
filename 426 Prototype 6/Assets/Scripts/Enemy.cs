@@ -6,17 +6,25 @@ public class Enemy : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Transform player; 
     public GameObject projectile;
+    public ParticleSystem heal;
     public float cooldown = 3f;
     public float speed = 2f;
     private bool cancast = true;
     private int randability;
     private int health = 5;
     private new Collider collider;
+    private MeshRenderer meshRenderer;
+    public Material flashmaterial;
+    public Material originalmaterial;
+    public float flashduration = 2f;
+
     
     void Start()
     {
         randability = Random.Range(0,4);
         collider = gameObject.GetComponent<Collider>();
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        meshRenderer = gameObject.GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -43,10 +51,11 @@ public class Enemy : MonoBehaviour
         if(cancast){
             cancast = false;
             collider.enabled = false;
-            Debug.Log("Invincible");
+            Debug.Log("Starting Flash");
+            StartCoroutine(Flashroutine());
             yield return new WaitForSeconds(2f);
+            Debug.Log("Ending Flash");
             collider.enabled = true;
-            Debug.Log("Not Invincible");
             yield return new WaitForSeconds(cooldown);
             cancast = true;
         }
@@ -55,10 +64,8 @@ public class Enemy : MonoBehaviour
         if(cancast){
             cancast = false;
             speed = 30f;
-            Debug.Log("Dashing");
             yield return new WaitForSeconds(0.1f);
-            speed = 2f;
-            Debug.Log("Not Dashing");
+            speed = 1f;
             yield return new WaitForSeconds(cooldown);
             cancast = true;
         }
@@ -67,8 +74,9 @@ public class Enemy : MonoBehaviour
         if(cancast){
             cancast = false;
             health += 1;
-            Debug.Log("Healed");
+            ParticleSystem particleclone = Instantiate(heal, transform.position, Quaternion.identity);
             yield return new WaitForSeconds(cooldown);
+            Destroy(particleclone);
             cancast = true;
         }
     }
@@ -76,9 +84,24 @@ public class Enemy : MonoBehaviour
         if(cancast){
             cancast = false;
             GameObject projectileclone = Instantiate(projectile, transform.position, transform.rotation);
-            Debug.Log("Shooting");
             yield return new WaitForSeconds(cooldown);
             cancast = true;
+        }
+    }
+    private void OnTriggerEnter(Collider other){
+        if(other.gameObject.CompareTag("Player")){
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator Flashroutine(){
+        float elapsed = 0f;
+        while(elapsed < flashduration){
+            meshRenderer.material = flashmaterial;
+            yield return new WaitForSeconds(0.1f);
+            meshRenderer.material = originalmaterial;
+            yield return new WaitForSeconds(0.1f);
+            elapsed+=0.2f;
         }
     }
 }

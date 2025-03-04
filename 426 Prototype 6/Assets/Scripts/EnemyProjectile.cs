@@ -24,7 +24,9 @@ public class EnemyProjectile : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player")){
-            ParticleSystem particles = Instantiate(explosion, transform.position, transform.rotation);
+            ParticleSystem particle = Instantiate(explosion, transform.position, transform.rotation);
+            Destroy(gameObject);
+            Destroy(particle.gameObject, particle.main.duration);
         }
     }
 }
