@@ -47,13 +47,17 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void ShootLaser() {
-        Vector3 spawnPos = transform.TransformPoint(new Vector3(spawnAttackOffset.x, spawnAttackOffset.y, 0));           
-        Instantiate(laser, spawnPos, transform.rotation);
+        if (UIScript.LaserAttack()) {
+            Vector3 spawnPos = transform.TransformPoint(new Vector3(spawnAttackOffset.x, spawnAttackOffset.y, 0));           
+            Instantiate(laser, spawnPos, transform.rotation);            
+        }
     }
 
     private void ShootFireball() {
-        Vector3 spawnPos = transform.TransformPoint(new Vector3(spawnAttackOffset.x, spawnAttackOffset.y, 0));           
-        Instantiate(fireball, spawnPos, transform.rotation);
+        if (UIScript.FireballAttack()) {
+            Vector3 spawnPos = transform.TransformPoint(new Vector3(spawnAttackOffset.x, spawnAttackOffset.y, 0));           
+            Instantiate(fireball, spawnPos, transform.rotation);            
+        }
     }
 
     IEnumerator ReloadLaser() {

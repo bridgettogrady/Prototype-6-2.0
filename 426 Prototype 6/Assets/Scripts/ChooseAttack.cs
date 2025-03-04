@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using System;
 
 public class ChooseAttack : MonoBehaviour
 {
@@ -52,5 +53,39 @@ public class ChooseAttack : MonoBehaviour
     // returns 0: laser, 1: fireball, 2: bomb
     public int GetCurrentAttack() {
         return currIndex;
+    }
+
+    // returns true if you cna attack and false if you can't
+    public bool LaserAttack() {
+        string[] parts = laser.text.Split(new string[] { ": " }, StringSplitOptions.None);
+        int num = int.Parse(parts[1]);
+        if (num == 0) {
+            return false;
+        }
+        num--;
+        laser.text = "Laser: " + num;
+        return true;
+    }
+
+    public bool FireballAttack() {
+        string[] parts = fireball.text.Split(new string[] { ": " }, StringSplitOptions.None);
+        int num = int.Parse(parts[1]);
+        if (num == 0) {
+            return false;
+        }
+        num--;
+        fireball.text = "Fireball: " + num;
+        return true;
+    }
+
+    public bool BombAttack() {
+        string[] parts = bomb.text.Split(new string[] { ": " }, StringSplitOptions.None);
+        int num = int.Parse(parts[1]);
+        if (num == 0) {
+            return false;
+        }
+        num--;
+        bomb.text = "Bomb: " + num;
+        return true;
     }
 }
