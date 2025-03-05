@@ -7,6 +7,7 @@ public class LaserMove : MonoBehaviour
     public float maxX;
     public float minY;
     public float maxY;
+    public ParticleSystem laserparticle;
 
     // Update is called once per frame
     void Update()
@@ -18,5 +19,12 @@ public class LaserMove : MonoBehaviour
             || transform.position.y > maxY || transform.position.y < minY) {
                 Destroy(gameObject);
             }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Enemy")){
+            ParticleSystem laserparticleclone = Instantiate(laserparticle, transform.position, Quaternion.identity);
+            Destroy(laserparticleclone.gameObject,laserparticleclone.main.duration);
+        }
     }
 }

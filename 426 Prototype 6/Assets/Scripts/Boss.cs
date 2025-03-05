@@ -4,7 +4,7 @@ using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class Boss : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Transform player; 
@@ -15,7 +15,8 @@ public class Enemy : MonoBehaviour
     public float speed = 2f;
     private bool cancast = true;
     private int randability;
-    private float health = 100f;
+    private int randability2;
+    private float health = 200f;
     private new Collider collider;
     private MeshRenderer meshRenderer;
     public Material flashmaterial;
@@ -32,6 +33,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         randability = Random.Range(0,4);
+        randability2 = Random.Range(0,4);
         collider = gameObject.GetComponent<Collider>();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         meshRenderer = gameObject.GetComponent<MeshRenderer>();
@@ -51,6 +53,19 @@ public class Enemy : MonoBehaviour
             StartCoroutine(Heal());
         }else if(randability == 3){
             StartCoroutine(Projectile());
+        }
+        if(randability2==randability){
+            cooldown = 3f;
+        }else{
+            if(randability2 == 0){
+            StartCoroutine(Invincibility());
+            }else if(randability2 == 1){
+                StartCoroutine(Dash());
+            }else if(randability2 == 2){
+                StartCoroutine(Heal());
+            }else if(randability2 == 3){
+                StartCoroutine(Projectile());
+        }
         }
     }
 
@@ -85,8 +100,8 @@ public class Enemy : MonoBehaviour
     private IEnumerator Heal(){
         if(cancast){
             cancast = false;
-            if(health<=100){
-                health += 20;
+            if(health<=5){
+                health += 1;
             }
             float targetFill = health/200f;
             StartCoroutine(HealthAnimate(targetFill));
@@ -132,7 +147,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage) {
         health -= damage;
-        float targetFill = health/100f;
+        float targetFill = health/200f;
         StartCoroutine(HealthAnimate(targetFill));
         if (health <= 0) {
             Die();
@@ -141,7 +156,6 @@ public class Enemy : MonoBehaviour
 
     private void Die() {
         Destroy(gameObject);
-        // generate random attack
         int attackType = UnityEngine.Random.Range(0, 3);
         int attackAmount = UnityEngine.Random.Range(2, 6);
         UIScript.SetAttack(attackType, attackAmount);

@@ -1,0 +1,1017 @@
+fileFormatVersion: 2
+guid: b3175fa0c891148158a6c7b4f53373de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 818294964284336927
+    second: objective survive_0
+  - first:
+      213: 1300235017917569324
+    second: objective survive_1
+  - first:
+      213: -3325482880181806059
+    second: objective survive_2
+  - first:
+      213: -379589072224398198
+    second: objective survive_3
+  - first:
+      213: 4357621144406545515
+    second: objective survive_4
+  - first:
+      213: -7135177478072989263
+    second: objective survive_5
+  - first:
+      213: -8203250406493744128
+    second: objective survive_6
+  - first:
+      213: -1986114975255427374
+    second: objective survive_7
+  - first:
+      213: -2469824564804922651
+    second: objective survive_8
+  - first:
+      213: 8422739978320236710
+    second: objective survive_9
+  - first:
+      213: -4678171063879250675
+    second: objective survive_10
+  - first:
+      213: 1649157062135581372
+    second: objective survive_11
+  - first:
+      213: -2798548423025778378
+    second: objective survive_12
+  - first:
+      213: -5983196076573282416
+    second: objective survive_13
+  - first:
+      213: -24330102713427928
+    second: objective survive_14
+  - first:
+      213: -2735939600205698072
+    second: objective survive_15
+  - first:
+      213: -1652892448293070058
+    second: objective survive_16
+  - first:
+      213: -3758078324227389897
+    second: objective survive_17
+  - first:
+      213: -1054471348892865869
+    second: objective survive_18
+  - first:
+      213: 524902219102337100
+    second: objective survive_19
+  - first:
+      213: -1067331290047453458
+    second: objective survive_20
+  - first:
+      213: -2014512618852048017
+    second: objective survive_21
+  - first:
+      213: 126137992894841410
+    second: objective survive_22
+  - first:
+      213: -3957129795720098024
+    second: objective survive_23
+  - first:
+      213: 2368147617657529666
+    second: objective survive_24
+  - first:
+      213: -7777877097877397323
+    second: objective survive_25
+  - first:
+      213: 1903727781443935133
+    second: objective survive_26
+  - first:
+      213: 4897235854861873944
+    second: objective survive_27
+  - first:
+      213: -243976815993307186
+    second: objective survive_28
+  - first:
+      213: -7512271734014881684
+    second: objective survive_29
+  - first:
+      213: 937224477530164774
+    second: objective survive_30
+  - first:
+      213: 7907493354887709597
+    second: objective survive_31
+  - first:
+      213: 5503709424604511186
+    second: objective survive_32
+  - first:
+      213: -6858733730123562850
+    second: objective survive_33
+  - first:
+      213: 456882281600322645
+    second: objective survive_34
+  - first:
+      213: -5546668014313589544
+    second: objective survive_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: objective survive_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 125
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ba8ab3fea2b5b00800000000000000
+      internalID: 818294964284336927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 123
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29108f1cdc5b0210800000000000000
+      internalID: 1300235017917569324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 126
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51cde1c80f289d1d0800000000000000
+      internalID: -3325482880181806059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 124
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a84d17dffbd6bbaf0800000000000000
+      internalID: -379589072224398198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_4
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 122
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64551ad751697c30800000000000000
+      internalID: 4357621144406545515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_5
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 118
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9871233e1cafc90800000000000000
+      internalID: -7135177478072989263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_6
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 76
+        width: 306
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0049c5dc733382e80800000000000000
+      internalID: -8203250406493744128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_7
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 123
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d601d0f3f6ef64e0800000000000000
+      internalID: -1986114975255427374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_8
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 121
+        width: 38
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2d44dd4ab69bdd0800000000000000
+      internalID: -2469824564804922651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 123
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0524b726593e470800000000000000
+      internalID: 8422739978320236710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_10
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 120
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d47f2143cc31fb0800000000000000
+      internalID: -4678171063879250675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_11
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 120
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba0b634c9bf2e610800000000000000
+      internalID: 1649157062135581372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_12
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 120
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631a1de590f8929d0800000000000000
+      internalID: -2798548423025778378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_13
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 120
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09fa6526eda67fca0800000000000000
+      internalID: -5983196076573282416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_14
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 121
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828da6686ef89aff0800000000000000
+      internalID: -24330102713427928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_15
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 119
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eba0d2ed6df70ad0800000000000000
+      internalID: -2735939600205698072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_16
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 121
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61bd09f531fbf09e0800000000000000
+      internalID: -1652892448293070058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_17
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 120
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 736c45edcaf98dbc0800000000000000
+      internalID: -3758078324227389897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_18
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 120
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bae96f15e3cd51f0800000000000000
+      internalID: -1054471348892865869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_19
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 120
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48b86789c3d84700800000000000000
+      internalID: 524902219102337100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_20
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 120
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee6ef0fb8d31031f0800000000000000
+      internalID: -1067331290047453458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_21
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 120
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6328cd42730b04e0800000000000000
+      internalID: -2014512618852048017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_22
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 121
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2428d2316d120c100800000000000000
+      internalID: 126137992894841410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_23
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 123
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f4df3aa637519c0800000000000000
+      internalID: -3957129795720098024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_24
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 121
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2452a2616b95dd020800000000000000
+      internalID: 2368147617657529666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_25
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 121
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b02f5a0dfd6f0490800000000000000
+      internalID: -7777877097877397323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_26
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 118
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b1202b4566b6a10800000000000000
+      internalID: 1903727781443935133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_27
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 122
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8133956301a76f340800000000000000
+      internalID: 4897235854861873944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_28
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 125
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfb945e0683d9cf0800000000000000
+      internalID: -243976815993307186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_29
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 123
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60d5ddd8ac0fb790800000000000000
+      internalID: -7512271734014881684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_30
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 123
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e8cf952b0b10d00800000000000000
+      internalID: 937224477530164774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_31
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 124
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9308d18f4f0dbd60800000000000000
+      internalID: 7907493354887709597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_32
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 126
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db7580df8a116c40800000000000000
+      internalID: 5503709424604511186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_33
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 125
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e90cef6f202e0d0a0800000000000000
+      internalID: -6858733730123562850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_34
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 45
+        width: 166
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c05f2b30c275600800000000000000
+      internalID: 456882281600322645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objective survive_35
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 19
+        width: 80
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d431d714d64603b0800000000000000
+      internalID: -5546668014313589544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

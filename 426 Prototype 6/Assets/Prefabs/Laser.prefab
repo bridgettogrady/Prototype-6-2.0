@@ -106,6 +106,7 @@ MonoBehaviour:
   maxX: 15.5
   minY: -7
   maxY: 7
+  laserparticle: {fileID: 7383860834489901038, guid: b62ce98601f674a648083c71139ad419, type: 3}
 --- !u!136 &312903503073067693
 CapsuleCollider:
   m_ObjectHideFlags: 0

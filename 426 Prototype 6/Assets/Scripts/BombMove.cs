@@ -65,9 +65,9 @@ public class BombMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Enemy")) {
-        Debug.Log("hit enemy");
-        Enemy enemyScript = other.gameObject.GetComponent<Enemy>();
-        enemyScript.TakeDamage(bombDamage);
-    }
+            ParticleSystem bomb = Instantiate(explosion,other.transform.position, Quaternion.identity);
+            Enemy enemyScript = other.gameObject.GetComponent<Enemy>();
+            enemyScript.TakeDamage(bombDamage);
+        }
 }
 }
