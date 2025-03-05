@@ -126,3 +126,4 @@ MonoBehaviour:
   fireballDamage: 50
   bombDamage: 100
   healthbar: {fileID: 8557130873490946642}
+  playermove: {fileID: 0}
