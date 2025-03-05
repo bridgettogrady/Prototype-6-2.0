@@ -80,3 +80,5 @@ MonoBehaviour:
   player: {fileID: 0}
   speed: 5
   bombTime: 0.5
+  bombDamage: 5
+  explosion: {fileID: 1482520671298339157, guid: 5ce41f0e7bdc44bfcb31d5f44f506050, type: 3}

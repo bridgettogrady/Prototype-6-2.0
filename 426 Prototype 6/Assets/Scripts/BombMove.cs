@@ -13,6 +13,7 @@ public class BombMove : MonoBehaviour
     public float speed = 5f;
     public float bombTime = 1.5f;
     public int bombDamage = 5;
+    public ParticleSystem explosion;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,6 +49,7 @@ public class BombMove : MonoBehaviour
         sp.enabled = true;
         lineRenderer.enabled = false;
         explosionRenderer.enabled = true;
+        ParticleSystem bomb = Instantiate(explosion,transform.position, Quaternion.identity);
         StartCoroutine(BombTick());
         collider.enabled = true;
     }

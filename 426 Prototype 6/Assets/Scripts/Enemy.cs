@@ -89,8 +89,8 @@ public class Enemy : MonoBehaviour
                 health += 1;
             }
             ParticleSystem particleclone = Instantiate(heal, transform.position + transform.forward * 1f, Quaternion.identity);
+            Destroy(particleclone.gameObject,particleclone.main.duration);
             yield return new WaitForSeconds(cooldown);
-            Destroy(particleclone);
             cancast = true;
         }
     }

@@ -261,6 +261,7 @@ MonoBehaviour:
   speed: 5
   bombTime: 0.5
   bombDamage: 5
+  explosion: {fileID: 1482520671298339157, guid: 691106d82b3c241ae806b912500ceb73, type: 3}
 --- !u!1 &8732846018717886949
 GameObject:
   m_ObjectHideFlags: 0
