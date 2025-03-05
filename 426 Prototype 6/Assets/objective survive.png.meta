@@ -201,6 +201,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1009,7 +1035,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      objective survive_0: 818294964284336927
+      objective survive_1: 1300235017917569324
+      objective survive_10: -4678171063879250675
+      objective survive_11: 1649157062135581372
+      objective survive_12: -2798548423025778378
+      objective survive_13: -5983196076573282416
+      objective survive_14: -24330102713427928
+      objective survive_15: -2735939600205698072
+      objective survive_16: -1652892448293070058
+      objective survive_17: -3758078324227389897
+      objective survive_18: -1054471348892865869
+      objective survive_19: 524902219102337100
+      objective survive_2: -3325482880181806059
+      objective survive_20: -1067331290047453458
+      objective survive_21: -2014512618852048017
+      objective survive_22: 126137992894841410
+      objective survive_23: -3957129795720098024
+      objective survive_24: 2368147617657529666
+      objective survive_25: -7777877097877397323
+      objective survive_26: 1903727781443935133
+      objective survive_27: 4897235854861873944
+      objective survive_28: -243976815993307186
+      objective survive_29: -7512271734014881684
+      objective survive_3: -379589072224398198
+      objective survive_30: 937224477530164774
+      objective survive_31: 7907493354887709597
+      objective survive_32: 5503709424604511186
+      objective survive_33: -6858733730123562850
+      objective survive_34: 456882281600322645
+      objective survive_35: -5546668014313589544
+      objective survive_4: 4357621144406545515
+      objective survive_5: -7135177478072989263
+      objective survive_6: -8203250406493744128
+      objective survive_7: -1986114975255427374
+      objective survive_8: -2469824564804922651
+      objective survive_9: 8422739978320236710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

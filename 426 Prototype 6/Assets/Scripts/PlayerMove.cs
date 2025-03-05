@@ -61,6 +61,11 @@ public class PlayerMove : MonoBehaviour
         currAttack = UIScript.GetCurrentAttack();
         scoretext.text = "Bosses Killed: " + bosseskilled.ToString() + " / 4";
 
+        // reload scene
+        if (Input.GetKeyDown(KeyCode.R)) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         if (Input.GetKey(KeyCode.A)) { // rotate counterclockwise
             transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
         }
@@ -117,6 +122,7 @@ public class PlayerMove : MonoBehaviour
         blockSprite.enabled = false;
         blockCollider.enabled = false;
         block.transform.localScale = new Vector3(maxScale, maxScale, 0);
+        currScale = maxScale;
         canBlock = false;
         yield return new WaitForSeconds(cooldown);
         canBlock = true;
