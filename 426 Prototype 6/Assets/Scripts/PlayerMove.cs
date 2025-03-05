@@ -28,12 +28,15 @@ public class PlayerMove : MonoBehaviour
     // block
     private Transform block;
     private SpriteRenderer blockSprite;
-    public float minScale = 1f;
-    public float scaleSpeed = 0.8f;
+    private Collider blockCollider;
+    public float scaleSpeed = 0.95f;
     public float maxScale;
     private float currScale;
     public float cooldown = 5f;
     private bool canBlock = true;
+    public float blockTime = 2f;
+    private float currTime = 0f;
+    private bool isBlocking = false;
 
     // UI
     public ChooseAttack UIScript;
@@ -46,6 +49,7 @@ public class PlayerMove : MonoBehaviour
 
         block = transform.Find("Block");
         blockSprite = block.GetComponent<SpriteRenderer>();
+        blockCollider = block.GetComponent<Collider>();
         currScale = maxScale;
     }
 
@@ -78,8 +82,13 @@ public class PlayerMove : MonoBehaviour
             }
         }
         // input for blocking
-        if (Input.GetKey(KeyCode.LeftShift)) {
+        if (Input.GetKey(KeyCode.LeftShift) && canBlock) {
             Block();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift) && isBlocking) {
+            canBlock = false;
+            isBlocking = false;
+            StartCoroutine(BlockCooldown());
         }
 
         if(health <=0){
@@ -88,18 +97,26 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void Block() {
-        if (!canBlock) {
-            return;
-        }
-        Debug.Log("blocking");
+        isBlocking = true;
         blockSprite.enabled = true;
-        currScale *= (scaleSpeed * Time.deltaTime);
-        if (currScale > minScale) {
-            block.transform.localScale = new Vector3(currScale, currScale, 0);
+        blockCollider.enabled = true;
+        currScale *= scaleSpeed;
+        block.transform.localScale = new Vector3(currScale, currScale, 0);
+        currTime += Time.deltaTime;
+        if (currTime > blockTime) {
+            currTime = 0f;
+            isBlocking = false;
+            StartCoroutine(BlockCooldown());
         }
-        else {
-            blockSprite.enabled = false;
-        }
+    }
+
+    private IEnumerator BlockCooldown() {
+        blockSprite.enabled = false;
+        blockCollider.enabled = false;
+        block.transform.localScale = new Vector3(maxScale, maxScale, 0);
+        canBlock = false;
+        yield return new WaitForSeconds(cooldown);
+        canBlock = true;
     }
 
     private void ShootLaser() {
