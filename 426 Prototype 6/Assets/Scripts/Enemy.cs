@@ -86,9 +86,9 @@ public class Enemy : MonoBehaviour
         if(cancast){
             cancast = false;
             if(health<=100){
-                health += 20;
+                health = 100;
             }
-            float targetFill = health/200f;
+            float targetFill = health/100f;
             StartCoroutine(HealthAnimate(targetFill));
             ParticleSystem particleclone = Instantiate(heal, transform.position + transform.forward * 1f, Quaternion.identity);
             Destroy(particleclone.gameObject,particleclone.main.duration);

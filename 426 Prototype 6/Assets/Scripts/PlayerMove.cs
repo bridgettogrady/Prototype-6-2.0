@@ -42,13 +42,15 @@ public class PlayerMove : MonoBehaviour
     public ChooseAttack UIScript;
     int currAttack = 0; // 0: laser, 1: fireball, 2: bomb
     public UnityEngine.UI.Image healthbar;
+    public UnityEngine.UI.Image bar1;
+    public UnityEngine.UI.Image bar2;
     private float health = 100f;
     public TextMeshProUGUI scoretext;
     private int bosseskilled;
-
+    public TextMeshProUGUI wintext;
     void Start() {
         bombScript.SetPlayer(gameObject);
-
+        wintext.enabled = false;
         block = transform.Find("Block");
         blockSprite = block.GetComponent<SpriteRenderer>();
         blockCollider = block.GetComponent<Collider>();
@@ -101,6 +103,9 @@ public class PlayerMove : MonoBehaviour
 
         if(health <=0){
             Die();
+        }
+        if(bosseskilled>=4){
+            Win();
         }
     }
 
@@ -196,6 +201,18 @@ public class PlayerMove : MonoBehaviour
         bosseskilled++;
         scoretext.text = "Bosses Killed: " + bosseskilled.ToString() + " / 4";
     }
-
+    private void Win()
+    {
+        wintext.enabled = true;
+        GameObject[] objectsToDestroy = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject obj in objectsToDestroy)
+        {
+            Destroy(obj);
+        }
+        Destroy(gameObject);
+        Destroy(healthbar);
+        Destroy(bar1);
+        Destroy(bar2);
+    }
 
 }

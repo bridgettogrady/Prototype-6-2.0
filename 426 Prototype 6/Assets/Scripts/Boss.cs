@@ -90,7 +90,7 @@ public class Boss : MonoBehaviour
     private IEnumerator Dash(){
         if(cancast){
             cancast = false;
-            speed = 30f;
+            speed = 15f;
             trail.emitting = true;
             yield return new WaitForSeconds(0.1f);
             speed = 1f;
@@ -102,8 +102,8 @@ public class Boss : MonoBehaviour
     private IEnumerator Heal(){
         if(cancast){
             cancast = false;
-            if(health<=5){
-                health += 1;
+            if(health<=200){
+                health = 200;
             }
             float targetFill = health/200f;
             StartCoroutine(HealthAnimate(targetFill));
