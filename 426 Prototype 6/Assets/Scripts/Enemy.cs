@@ -19,6 +19,10 @@ public class Enemy : MonoBehaviour
     public Material originalmaterial;
     public float flashduration = 2f;
 
+    // for taking damage
+    public int laserDamage = 1;
+    public int fireballDamage = 2;
+    public int bombDamage = 4;
     
     void Start()
     {
@@ -91,8 +95,16 @@ public class Enemy : MonoBehaviour
         }
     }
     private void OnTriggerEnter(Collider other){
+        Debug.Log("triggered by " + other.gameObject.tag);
         if(other.gameObject.CompareTag("Player")){
             Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Laser")) {
+            Debug.Log("took laser damage");
+            TakeDamage(laserDamage);
+        }
+        if (other.gameObject.CompareTag("Fireball")) {
+            TakeDamage(fireballDamage);
         }
     }
 
@@ -105,6 +117,19 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             elapsed+=0.2f;
         }
+    }
+
+    public void TakeDamage(int damage) {
+        health -= damage;
+        Debug.Log("took damage, health=" + health);
+        if (damage <= 0) {
+            Die();
+        }
+    }
+
+    private void Die() {
+        Destroy(gameObject);
+        // drop random amount of attacks for player to use
     }
 
 }
