@@ -1222,7 +1222,7 @@ MonoBehaviour:
   enemy: {fileID: 5330003906325829726, guid: d1378f71e742d402495baeca03553bfb, type: 3}
   radius: 20
   spawncooldown: 10
-  cooldowndecrease: 0.2
+  cooldowndecrease: 0.1
 --- !u!1 &1980049389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae74199251415b4da7f3ad64a9d7c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 450
+  rotationSpeed: 300
   spawnAttackOffset: {x: 0.35, y: 1}
   laser: {fileID: 7675248015446142106, guid: efaa2d50e5cd2d048a51f0e528eac271, type: 3}
   laserReload: 0.3
@@ -1401,9 +1401,9 @@ MonoBehaviour:
   bombReload: 7
   bombScript: {fileID: 5189277175594950776, guid: 090f7eee94f687a43bf82ba9862e6e67, type: 3}
   scaleSpeed: 0.999
-  maxScale: 4
-  cooldown: 5
-  blockTime: 2
+  maxScale: 5
+  cooldown: 1
+  blockTime: 3
   UIScript: {fileID: 699140387}
   healthbar: {fileID: 594668301}
 --- !u!212 &2070617553

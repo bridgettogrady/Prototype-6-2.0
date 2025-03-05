@@ -1,5 +1,8 @@
 using System.Collections;
+using System.Diagnostics;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -12,7 +15,7 @@ public class Enemy : MonoBehaviour
     public float speed = 2f;
     private bool cancast = true;
     private int randability;
-    private int health = 5;
+    private float health = 100f;
     private new Collider collider;
     private MeshRenderer meshRenderer;
     public Material flashmaterial;
@@ -20,10 +23,11 @@ public class Enemy : MonoBehaviour
     public float flashduration = 2f;
 
     // for taking damage
-    public int laserDamage = 1;
-    public int fireballDamage = 2;
-    public int bombDamage = 4;
+    public int laserDamage = 10;
+    public int fireballDamage = 30;
+    public int bombDamage = 50;
     private ChooseAttack UIScript;
+    public UnityEngine.UI.Image healthbar;
     
     void Start()
     {
@@ -81,7 +85,9 @@ public class Enemy : MonoBehaviour
     private IEnumerator Heal(){
         if(cancast){
             cancast = false;
-            health += 1;
+            if(health<=5){
+                health += 1;
+            }
             ParticleSystem particleclone = Instantiate(heal, transform.position + transform.forward * 1f, Quaternion.identity);
             yield return new WaitForSeconds(cooldown);
             Destroy(particleclone);
@@ -92,7 +98,7 @@ public class Enemy : MonoBehaviour
         if(cancast){
             cancast = false;
             GameObject projectileclone = Instantiate(projectile, transform.position, transform.rotation);
-            yield return new WaitForSeconds(cooldown);
+            yield return new WaitForSeconds(cooldown+3f);
             cancast = true;
         }
     }
@@ -124,7 +130,8 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage) {
         health -= damage;
-        Debug.Log("took damage, health=" + health);
+        float targetFill = health/100f;
+        StartCoroutine(HealthAnimate(targetFill));
         if (health <= 0) {
             Die();
         }
@@ -132,12 +139,24 @@ public class Enemy : MonoBehaviour
 
     private void Die() {
         Destroy(gameObject);
-        
         // generate random attack
-        int attackType = UnityEngine.Random.Range(0, 2);
+        int attackType = UnityEngine.Random.Range(0, 3);
         int attackAmount = UnityEngine.Random.Range(2, 6);
-        Debug.Log("attack amount is " + attackAmount);
         UIScript.SetAttack(attackType, attackAmount);
+    }
+
+    private IEnumerator HealthAnimate(float targetFill){
+        float elapsed = 0f;
+        float duration = 0.2f;
+        float startFill = healthbar.fillAmount;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            healthbar.fillAmount = Mathf.Lerp(startFill, targetFill, elapsed / duration);
+            yield return null;
+        }
+        healthbar.fillAmount = targetFill;
     }
 
 }

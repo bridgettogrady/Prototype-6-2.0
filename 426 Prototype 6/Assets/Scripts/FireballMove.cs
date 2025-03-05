@@ -6,6 +6,7 @@ public class FireballMove : MonoBehaviour
     private GameObject player;
     public float speed;
     public float lifetime = 3f;
+    public int fireballDamage = 3;
 
     private Vector3 playerFacing;
 

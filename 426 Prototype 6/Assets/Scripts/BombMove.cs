@@ -12,6 +12,7 @@ public class BombMove : MonoBehaviour
     private new Collider collider;
     public float speed = 5f;
     public float bombTime = 1.5f;
+    public int bombDamage = 5;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -61,10 +62,10 @@ public class BombMove : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        // if (other.gameObject.CompareTag("Enemy")) {
-        //     Debug.Log("hit enemy");
-        //     Enemy enemyScript = other.gameObject.GetComponent<Enemy>();
-        //     enemyScript.TakeDamage(bombDamage);
-        // }
+        if (other.gameObject.CompareTag("Enemy")) {
+        Debug.Log("hit enemy");
+        Enemy enemyScript = other.gameObject.GetComponent<Enemy>();
+        enemyScript.TakeDamage(bombDamage);
     }
+}
 }

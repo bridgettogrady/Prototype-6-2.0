@@ -37,7 +37,6 @@ public class PlayerMove : MonoBehaviour
     public float blockTime = 2f;
     private float currTime = 0f;
     private bool isBlocking = false;
-
     // UI
     public ChooseAttack UIScript;
     int currAttack = 0; // 0: laser, 1: fireball, 2: bomb
@@ -160,7 +159,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Enemy")){
+        if(other.gameObject.CompareTag("Enemy")&&isBlocking==false){
             health -= 10;
             float targetFill = health/100f;
             StartCoroutine(HealthAnimate(targetFill));
