@@ -29,6 +29,7 @@ public class Boss : MonoBehaviour
     public int bombDamage = 50;
     private ChooseAttack UIScript;
     public UnityEngine.UI.Image healthbar;
+    public PlayerMove playermove;
     
     void Start()
     {
@@ -39,6 +40,7 @@ public class Boss : MonoBehaviour
         meshRenderer = gameObject.GetComponent<MeshRenderer>();
         trail = gameObject.GetComponent<TrailRenderer>();
         UIScript = FindFirstObjectByType<ChooseAttack>();
+        playermove = GameObject.FindGameObjectWithTag("Player")?.GetComponent<PlayerMove>();
     }
 
     // Update is called once per frame
@@ -156,6 +158,7 @@ public class Boss : MonoBehaviour
 
     private void Die() {
         Destroy(gameObject);
+        playermove.addscore();
         int attackType = UnityEngine.Random.Range(0, 3);
         int attackAmount = UnityEngine.Random.Range(2, 6);
         UIScript.SetAttack(attackType, attackAmount);

@@ -3,6 +3,7 @@ using System.Collections;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -42,6 +43,8 @@ public class PlayerMove : MonoBehaviour
     int currAttack = 0; // 0: laser, 1: fireball, 2: bomb
     public UnityEngine.UI.Image healthbar;
     private float health = 100f;
+    public TextMeshProUGUI scoretext;
+    private int bosseskilled;
 
     void Start() {
         bombScript.SetPlayer(gameObject);
@@ -56,6 +59,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         currAttack = UIScript.GetCurrentAttack();
+        scoretext.text = "Bosses Killed: " + bosseskilled.ToString() + " / 4";
 
         if (Input.GetKey(KeyCode.A)) { // rotate counterclockwise
             transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
@@ -182,5 +186,10 @@ public class PlayerMove : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Destroy(gameObject);
     }
+    public void addscore(){
+        bosseskilled++;
+        scoretext.text = "Bosses Killed: " + bosseskilled.ToString() + " / 4";
+    }
+
 
 }
