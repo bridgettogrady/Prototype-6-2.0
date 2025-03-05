@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     public int laserDamage = 1;
     public int fireballDamage = 2;
     public int bombDamage = 4;
+    private ChooseAttack UIScript;
     
     void Start()
     {
@@ -31,6 +32,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         meshRenderer = gameObject.GetComponent<MeshRenderer>();
         trail = gameObject.GetComponent<TrailRenderer>();
+        UIScript = FindFirstObjectByType<ChooseAttack>();
     }
 
     // Update is called once per frame
@@ -100,11 +102,13 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
         if (other.gameObject.CompareTag("Laser")) {
-            Debug.Log("took laser damage");
             TakeDamage(laserDamage);
         }
         if (other.gameObject.CompareTag("Fireball")) {
             TakeDamage(fireballDamage);
+        }
+        if (other.gameObject.CompareTag("Bomb")) {
+            TakeDamage(bombDamage);
         }
     }
 
@@ -122,14 +126,19 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage) {
         health -= damage;
         Debug.Log("took damage, health=" + health);
-        if (damage <= 0) {
+        if (health <= 0) {
             Die();
         }
     }
 
     private void Die() {
         Destroy(gameObject);
-        // drop random amount of attacks for player to use
+        
+        // generate random attack
+        int attackType = UnityEngine.Random.Range(0, 2);
+        int attackAmount = UnityEngine.Random.Range(2, 6);
+        Debug.Log("attack amount is " + attackAmount);
+        UIScript.SetAttack(attackType, attackAmount);
     }
 
 }

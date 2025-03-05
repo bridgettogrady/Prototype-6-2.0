@@ -55,6 +55,29 @@ public class ChooseAttack : MonoBehaviour
         return currIndex;
     }
 
+    public void SetAttack(int attackType, int amount) {
+        TextMeshProUGUI attack = null;
+        string attackString = "";
+        switch (attackType) {
+            case 0:
+                attack = laser;
+                attackString = "Laser: ";
+                break;
+            case 1:
+                attack = fireball;
+                attackString = "Fireball: ";
+                break;
+            case 2:
+                attack = bomb;
+                attackString = "Bomb: ";
+                break;
+        }
+        string[] parts = attack.text.Split(new string[] { ": " }, StringSplitOptions.None);
+        int num = int.Parse(parts[1]);
+        num += amount;
+        attack.text = attackString + num;
+    }
+
     // returns true if you cna attack and false if you can't
     public bool LaserAttack() {
         string[] parts = laser.text.Split(new string[] { ": " }, StringSplitOptions.None);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4602116789261583136}
   - component: {fileID: 274811694723474968}
   - component: {fileID: 8146411330768284185}
-  - component: {fileID: 7001772168532181921}
+  - component: {fileID: 4656145137497778493}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Fireball
@@ -103,16 +103,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   lifetime: 1.5
---- !u!58 &7001772168532181921
-CircleCollider2D:
+--- !u!135 &4656145137497778493
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735494999966236618}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -121,21 +118,9 @@ CircleCollider2D:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 2.935
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
