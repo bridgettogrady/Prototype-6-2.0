@@ -363,7 +363,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2070617554}
@@ -1737,11 +1737,11 @@ MonoBehaviour:
   fireball: {fileID: 1735494999966236618, guid: 3d5ea0a7efb4c824789c2c3931642fd4, type: 3}
   fireballReload: 1
   bomb: {fileID: 7257083469447167047, guid: 090f7eee94f687a43bf82ba9862e6e67, type: 3}
-  bombReload: 7
+  bombReload: 3
   bombScript: {fileID: 5189277175594950776, guid: 090f7eee94f687a43bf82ba9862e6e67, type: 3}
   scaleSpeed: 0.999
   maxScale: 5
-  cooldown: 1
+  cooldown: 2
   blockTime: 3
   UIScript: {fileID: 699140387}
   healthbar: {fileID: 594668301}
